@@ -52,3 +52,7 @@ Aqui segue uma descrição do fluxo do jogo e principais ações que devem acont
 - Com N cogumelos coletados, mostra uma pop-up de "pulo duplo habilitado" (Não precisa analytics pois seria o mesmo que Coleta ( CogumeloN , tempo ) )
 - Com toods os X cogumelos coletados, mostra uma pop-up de vitória, com o tempo que o usuário levou e um botão de confirmação
   - No clique do botão, atualiza o recorde atual (se necessário), mostra um anúncio e retorna à tela inicial
+
+# Créditos
+
+- Seta utilizada nos botões baixada do Flaticon, do autor [Freepik](https://www.flaticon.com/authors/freepik)
