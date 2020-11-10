@@ -9,19 +9,18 @@ public class MainMenuController : MonoBehaviour
 
     public void OnRecordClicked()
     {
-        //RecordText.text = PlayerPrefs.GetString("Record");
+        float recordTime = PlayerPrefs.GetFloat("Record");
+        RecordText.text = "Seu recorde é : " + Utils.GetFormattedTime(recordTime);
         RecordScreen.SetActive(true);
     }
 
     public void OnRecordCloseClicked()
     {
-        Debug.Log("it entered");
         RecordScreen.SetActive(false);
     }
 
     public void OnStartClicked()
     {
-        //If we change index of scenes, it still work
-        SceneManager.LoadScene("GameScene");
+        AnalyticsController.I.SendGameStart();
     }
 }
