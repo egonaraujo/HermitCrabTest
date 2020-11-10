@@ -29,20 +29,20 @@ public class FollowObject : MonoBehaviour
 
         if (isAbove && myPos.y < LimitUp)
         {
-            myPos.y += (Mathf.Abs(targetPos.y - myPos.y) -CenterAreaLimitTop) * moveSpeed;
+            myPos.y += Mathf.Pow(targetPos.y - (myPos.y + CenterAreaLimitTop),3) * moveSpeed;
         }
         else if (isBelow && myPos.y > LimitDown)
         {
-            myPos.y -= (Mathf.Abs(targetPos.y - myPos.y) - CenterAreaLimitBottom) * moveSpeed; 
+            myPos.y -= Mathf.Pow( (myPos.y - CenterAreaLimitBottom)  - targetPos.y, 3) * moveSpeed; 
         }
 
         if (isLeft && myPos.x > LimitLeft)
         {
-            myPos.x -= (Mathf.Abs(targetPos.x - myPos.x) - CenterAreaLimitBottom) * moveSpeed;
+            myPos.x -= Mathf.Pow((myPos.x - CenterAreaLimitLeft) - targetPos.x, 3) * moveSpeed;
         }
         else if (isRight && myPos.x < LimitRight)
         {
-            myPos.x += (Mathf.Abs(targetPos.x - myPos.x) - CenterAreaLimitBottom) * moveSpeed;
+            myPos.x += Mathf.Pow(targetPos.x - (myPos.x + CenterAreaLimitRight), 3) * moveSpeed;
         }
 
         gameObject.transform.position = myPos;
